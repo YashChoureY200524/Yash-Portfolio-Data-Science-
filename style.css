@@ -715,3 +715,52 @@ body {
         margin: 5px 0;
     }
 }
+
+
+
+
+
+
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-background);
+    z-index: 9999; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease 0.5s;
+}
+
+.intro-text {
+    font-size: 3em; 
+    font-weight: bold;
+    color: var(--color-highlight); 
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(0, 255, 204, 0.5); 
+}
+
+.intro-text .letter {
+    display: inline-block;
+    opacity: 0; 
+    transform: translateY(20px); 
+    animation: reveal-text 0.5s forwards; 
+}
+
+/* Keyframes for the reveal animation */
+@keyframes reveal-text {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
