@@ -764,3 +764,135 @@ body {
 }
 
 
+
+/* ======================================= */
+/* 900PX BREAKPOINT: TABLETS & LARGE PHONES */
+/* ======================================= */
+@media (max-width: 900px) {
+    
+    /* --- HERO SECTION --- */
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 50px; 
+        padding-bottom: 50px;
+        gap: 30px;
+    }
+    
+    .profile-image-container {
+        /* Center the image and make it slightly smaller */
+        margin: 0 auto 30px auto;
+        width: 250px; 
+        height: 250px;
+    }
+    
+    .profile-image {
+        margin: 0;
+        padding: 0;
+    }
+
+    .hero-content h1 {
+        font-size: 3em; /* Reduce heading size */
+    }
+
+    /* Stack CTA buttons */
+    .hero-content .cta-button {
+        display: block;
+        margin-bottom: 15px;
+    }
+    
+    /* --- NAVBAR --- */
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 5%;
+    }
+    
+    .navbar nav {
+        margin-top: 15px;
+        /* Allow nav links to wrap if necessary */
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: center;
+    }
+    
+    .navbar nav a {
+        margin: 5px 15px; /* Adjust spacing for wrapped links */
+    }
+    
+    .navbar .cta-button {
+        margin-top: 15px;
+    }
+
+    /* --- ABOUT SECTION DETAILS --- */
+    .personal-details {
+        /* Stack the name, focus, and location vertically */
+        flex-direction: column;
+        gap: 10px;
+    }
+    .personal-details p {
+        text-align: center;
+        margin: 5px 0;
+    }
+    
+    /* --- VIDEO SECTION --- */
+    .video-section h2, .skills-section h2, .certs-section h2 {
+        font-size: 2em;
+    }
+}
+
+
+/* ======================================= */
+/* 600PX BREAKPOINT: SMALL MOBILE DEVICES */
+/* ======================================= */
+@media (max-width: 600px) {
+    
+    /* --- GLOBAL ADJUSTMENTS --- */
+    .skills-section, 
+    .about-section, 
+    .certs-section, 
+    .contact-section,
+    .video-section,
+    .projects-section {
+        padding: 50px 5%; /* Reduce section padding */
+    }
+    
+    .hero-content h1 {
+        font-size: 2em !important; /* Smaller main heading */
+    }
+    
+    /* --- GRID LAYOUTS (MOST IMPORTANT FIX) --- */
+    /* All multi-column sections collapse to a single column */
+    .skills-grid, 
+    .certifications-grid, 
+    .tutorial-videos-grid,
+    .projects-grid {
+        grid-template-columns: 1fr; 
+        gap: 20px;
+    }
+    
+    /* --- CONTACT SECTION --- */
+    .email-link {
+        font-size: 1.2em; /* Shrink email text */
+        padding: 12px 20px;
+    }
+
+    .social-links {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .social-icon {
+        margin: 0;
+        font-size: 1em;
+    }
+    
+    /* --- PRELOADER TEXT --- */
+    /* Ensure the animated text fits on small screens */
+    .intro-text {
+        font-size: 2em; 
+    }
+}
+
+
