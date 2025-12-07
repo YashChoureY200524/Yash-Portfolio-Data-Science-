@@ -521,3 +521,197 @@ body {
     font-size: 0.95em;
     text-align: center;
 }
+
+
+/* --- PROJECTS SECTION STYLING --- */
+
+.projects-section {
+    padding: 80px 5%;
+    /* Ensures background is consistent with the rest of the body */
+    background-color: var(--color-background); 
+    color: var(--color-text); 
+}
+
+.projects-section .section-heading {
+    color: var(--color-highlight);
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+.projects-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 50px;
+    color: #cccccc; 
+    font-size: 1.1em;
+}
+
+.projects-grid {
+    display: grid;
+    /* Responsive grid: 3 columns max, wrapping at 320px minimum width */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background: #1a1a1a; /* Slightly lighter than background for depth */
+    border-radius: 10px;
+    /* Subtle shadow using the highlight color */
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.1); 
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Strong top border for visual emphasis, using highlight color */
+    border-top: 5px solid var(--color-highlight); 
+    display: flex; 
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-8px); /* Matches the hover effect of cert-card */
+    /* Intense shadow on hover */
+    box-shadow: 0 8px 30px rgba(0, 255, 204, 0.4);
+}
+
+.project-title {
+    color: var(--color-text);
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.6em;
+}
+
+.project-description {
+    color: #b0b0b0;
+    margin-bottom: 25px;
+    line-height: 1.6;
+    font-size: 1em;
+    flex-grow: 1; /* Ensures all cards have the same height */
+}
+
+.project-tech-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    min-height: 40px; /* Ensures consistent vertical spacing */
+}
+
+.project-tech-list li {
+    /* Style for the individual tech tags */
+    background: #0d0d0d; 
+    display: inline-block;
+    padding: 6px 10px;
+    margin: 5px 5px 5px 0;
+    border-radius: 4px;
+    font-size: 0.8em;
+    color: var(--color-highlight);
+    border: 1px solid rgba(0, 255, 204, 0.3);
+    font-weight: 500;
+}
+
+.project-tech-list li strong {
+    color: var(--color-text);
+    font-weight: bold;
+}
+
+.project-links {
+    display: flex;
+    gap: 15px;
+    margin-top: auto; /* Pushes links to the bottom */
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 255, 204, 0.2);
+}
+
+/* Primary link uses the main CTA style (Live Demo) */
+.project-links .project-link {
+    flex-grow: 1;
+    text-align: center;
+    padding: 12px 15px;
+    font-size: 0.9em;
+}
+
+/* Secondary link uses an inverted/subtle style (GitHub Repo) */
+.project-links .secondary-link {
+    background-color: transparent;
+    color: #cccccc !important;
+    border: 2px solid #555;
+    flex-grow: 1; 
+    text-align: center;
+    padding: 12px 15px;
+    font-size: 0.9em;
+}
+
+
+
+
+
+
+@media (max-width: 900px) {
+    /* --- Hero Section --- */
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 50px; /* Reduce top padding */
+        padding-bottom: 50px;
+        gap: 30px;
+    }
+    
+    .profile-image-container {
+        /* Center the image and make it slightly smaller */
+        margin: 0 auto 30px auto;
+        width: 200px; 
+        height: 200px;
+    }
+    
+    .profile-image {
+        margin: 0;
+        padding: 0;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5em; /* Reduce heading size */
+    }
+
+    /* Stack CTA buttons */
+    .hero-content a.cta-button {
+        display: block;
+        margin-bottom: 10px;
+    }
+    
+    /* --- Navbar Adjustments --- */
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 5%;
+    }
+    
+    .navbar nav {
+        margin-top: 15px;
+        /* Allow nav links to wrap */
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: center;
+    }
+    
+    .navbar nav a {
+        margin: 5px 10px; /* Adjust spacing for wrapped links */
+    }
+    
+    .navbar .cta-button {
+        margin-top: 15px;
+    }
+
+    /* --- About Section Details --- */
+    .personal-details {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .personal-details p {
+        text-align: center;
+        margin: 5px 0;
+    }
+}
